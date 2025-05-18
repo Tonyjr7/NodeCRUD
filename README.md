@@ -14,7 +14,6 @@ Base URL: **`http://localhost:5000`**
 | GET    | `/users/:id`  | Get **one user** by ID          | URL param `id`| **200** user object<br>**404** if not found |
 | POST   | `/users`      | **Create** a user               | `{ name, email, age }` | **201** created object<br>**409** email exists |
 | PUT    | `/users/:id`  | **Replace** a user              | same as POST  | **200** updated object<br>**404** if not found |
-| PATCH  | `/users/:id`  | **Partial update**              | any subset of fields | **200** updated object<br>**404** if not found |
 | DELETE | `/users/:id`  | **Delete** a user               | –             | **200** confirmation<br>**404** if not found |
 
 > Any other path returns **404 Route not found** (handled by the global middleware).
